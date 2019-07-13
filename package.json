@@ -1,0 +1,19 @@
+{
+  "name": "averigua",
+  "version": "1.0.0",
+  "description": "A vanilla JS class that checks for all the things i'm always checking for.",
+  "main": "Averigua.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbriz/Averigua.git"
+  },
+  "author": "Nick Briz <nbriz@brangerbriz.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nbriz/Averigua/issues"
+  },
+  "homepage": "https://github.com/nbriz/Averigua#readme"
+}
