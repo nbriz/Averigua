@@ -35,6 +35,7 @@ Averigua.hasTouch()       // Boolean
 Averigua.doNotTrack()     // Boolean
 Averigua.orientation()    // String (landscape, portrait or no-support)
 Averigua.screen()         // returns object with screen info
+Averigua.language()       // returns object with language and country
 
 Averigua.gpuInfo()        // returns object with GPU info
 Averigua.browserInfo()    // returns object with browser info
