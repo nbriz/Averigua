@@ -113,6 +113,15 @@ class Averigua {
     } else return 'no-support'
   }
 
+  static screen () {
+    return {
+      orientation: this.orientation(),
+      colorDepth: window.screen.colorDepth,
+      width: window.screen.width,
+      height: window.screen.height
+    }
+  }
+
   static gpuInfo () {
     const canvas = document.createElement('canvas')
     const gl = canvas.getContext('webgl')
