@@ -84,8 +84,8 @@ class Averigua {
   static hasTouch () {
     // via: https://stackoverflow.com/a/4819886/1104148
     if (!this.isBrowser()) return this._browserErr()
-    let prefixes = ' -webkit- -moz- -o- -ms- '.split(' ')
-    let mq = function (query) { return window.matchMedia(query).matches }
+    const prefixes = ' -webkit- -moz- -o- -ms- '.split(' ')
+    const mq = function (query) { return window.matchMedia(query).matches }
     if (('ontouchstart' in window) ||
       (window.DocumentTouch && document instanceof DocumentTouch)) {
       return true
@@ -116,7 +116,7 @@ class Averigua {
   static gpuInfo () {
     const canvas = document.createElement('canvas')
     const gl = canvas.getContext('webgl')
-    let dbgRenNfo = gl.getExtension('WEBGL_debug_renderer_info')
+    const dbgRenNfo = gl.getExtension('WEBGL_debug_renderer_info')
     let vendor = gl.getParameter(gl.VENDOR)
     let renderer = gl.getParameter(gl.RENDERER)
     if (dbgRenNfo) {
@@ -177,8 +177,8 @@ class Averigua {
   static audioSupport () {
     if (!this.isBrowser()) return this._browserErr()
 
-    let aObj = { mp3: 'no', vorbis: 'no', wav: 'no', aac: 'no' }
-    let a = document.createElement('audio')
+    const aObj = { mp3: 'no', vorbis: 'no', wav: 'no', aac: 'no' }
+    const a = document.createElement('audio')
     if (typeof a.canPlayType === 'function') {
       aObj.mp3 = a.canPlayType('audio/mpeg;')
       if (aObj.mp3 === '') aObj.mp3 = 'no'
@@ -195,14 +195,14 @@ class Averigua {
   static videoSupport () {
     if (!this.isBrowser()) return this._browserErr()
 
-    let vObj = {
+    const vObj = {
       captions: 'no',
       poster: 'no',
       webm: 'no',
       h264: 'no',
       theora: 'no'
     }
-    let v = document.createElement('video')
+    const v = document.createElement('video')
     if (typeof v.canPlayType === 'function') {
       vObj.webm = v.canPlayType('video/webm; codecs="vp8, vorbis"')
       if (vObj.webm === '') vObj.webm = 'no'
@@ -224,7 +224,7 @@ class Averigua {
 
     const plugins = []
     for (let i = 0; i < navigator.plugins.length; i++) {
-      let p = {
+      const p = {
         name: navigator.plugins[i].name,
         description: navigator.plugins[i].description,
         filename: navigator.plugins[i].filename,
@@ -339,7 +339,7 @@ class Averigua {
     const initializeBaseFontsSpans = function () {
       const spans = []
       for (let idx = 0, length = baseFonts.length; idx < length; idx++) {
-        let s = createSpan()
+        const s = createSpan()
         s.style.fontFamily = baseFonts[idx]
         baseFontsDiv.appendChild(s)
         spans.push(s)
@@ -350,9 +350,9 @@ class Averigua {
     const initializeFontsSpans = function () {
       var spans = {}
       for (let i = 0, l = fontList.length; i < l; i++) {
-        let fontSpans = []
+        const fontSpans = []
         for (let j = 0, numDFnts = baseFonts.length; j < numDFnts; j++) {
-          let s = createSpanWithFonts(fontList[i], baseFonts[j])
+          const s = createSpanWithFonts(fontList[i], baseFonts[j])
           fontsDiv.appendChild(s)
           fontSpans.push(s)
         }
