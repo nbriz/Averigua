@@ -142,6 +142,10 @@ class Averigua {
     }
     M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?']
     if ((tem = ua.match(/version\/(\d+)/i)) !== null) M.splice(1, 1, tem[1])
+    // check for Brave browser
+    if (window.navigator.brave.isBrave.name === 'isBrave') {
+      M[0] = 'Brave'; M[1] = null
+    }
     return { name: M[0], version: M[1] }
   }
 
