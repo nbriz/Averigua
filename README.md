@@ -17,7 +17,7 @@ on the web
 
 or in node
 ```js
-const Averigua = require('averigua')
+const Averigua = require('Averigua')
 ```
 
 ## methods
