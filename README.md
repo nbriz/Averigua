@@ -12,7 +12,7 @@ $ npm install git+https://github.com/nbriz/Averigua.git
 
 on the web
 ```HTML
-<script src="node_modules/averigua/Averigua.js"></script>
+<script src="node_modules/Averigua/Averigua.js"></script>
 ```
 
 or in node
