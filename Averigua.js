@@ -26,9 +26,12 @@
     Averigua.hasTouch()       // Boolean
 
     Averigua.doNotTrack()     // Boolean
+
+    Averigua.language()       // returns object with language and country
+    Averigua.timeZone()       // String
+
     Averigua.orientation()    // String (landscape, portrait or no-support)
     Averigua.screen()         // returns object with screen info
-    Averigua.language()       // returns object with language and country
 
     Averigua.gpuInfo()        // returns object with GPU info
     Averigua.browserInfo()    // returns object with browser info
@@ -129,6 +132,12 @@ class Averigua {
     const lan = { langauge: this.languageCodes()[arr[0]] }
     if (arr.length > 1) lan.country = this.countryCodes()[arr[1]]
     return lan
+  }
+
+  static timeZone () {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone
+      ? Intl.DateTimeFormat().resolvedOptions().timeZone
+      : new Date().getTimezoneOffset()
   }
 
   static gpuInfo () {
