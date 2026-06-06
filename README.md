@@ -1,3 +1,6 @@
+This library has been folded into the [netnet-standard-library](https://github.com/netizenorg/netnet-standard-library/), I will no longer be pushing updates to this repo, future changes will now live here: https://github.com/netizenorg/netnet-standard-library/tree/main/src/Averigua
+
+
 # Averigua
 
 A vanilla JS class that checks for all the things I'm always checking for. Essentially this is my "detection collectoin"
